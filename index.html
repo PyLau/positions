@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Positions</title>
+	<link rel="stylesheet" href="positions.css">
+</head>
+<body ng-app="positionApp" ng-controller="positionController">
+    <div ng-class="{'hide' : spinner}">
+        <div class="spin">
+            <img src="../../images/loader.gif">
+        </div>
+    </div>
+    <div class="hide" ng-class="{'show' : spinner}">
+		<article class="positions">
+			<header>
+				<h1>POSICIONES</h1>
+			</header>
+			<section class="tabs" id="tabs-positions">
+				<ul>
+					<li ng-repeat="position in positions" ng-class="{active : activeRoundMenu === position.leagueId}">
+						<a href="" ng-click="setActiveRound(position.leagueId)">
+							<div class="round-desktop">
+								{{position.leagueName}}
+							</div>
+							<div class="round-mobile">
+								{{position.leagueName}}
+							</div>						
+						</a>
+					</li>			
+				</ul>
+				<section ng-repeat="position in positions" class="widget-positions" id="positions-{{position.leagueName.replace(' ','') | lowercase}}" ng-class="{show : activeRoundMenu === position.leagueId, hidden : activeRoundMenu != position.leagueId}">
+							<table border="0" cellspacing="0" cellpadding="0">
+									<thead>											
+										<tr>
+											<th>EQUIPOS</th>
+											<th ng-repeat="stat in stats"
+											 ng-class="getStatsTitleClass(stat.mobile)">
+											 {{stat.code}}
+											 </th>
+										</tr>
+									</thead>
+									<tbody ng-repeat="division in position.divisionList">
+										<tr>
+											<td>{{division.divisionName}}</td>
+										</tr>
+										<tr ng-repeat="team in division.teamsPositions" ng-class="getRowClass($index)">
+												<td>
+													<a href="{{agileDomain}}/pagina/mlb-equipo?name={{team.urlName}}&teamId={{team.teamId}}" target="_blank">	
+														<div class="icon">
+															<i class="mlb-{{team.teamShortName}}-24"></i>
+														</div>
+													</a>
+													<a href="{{agileDomain}}/pagina/mlb-equipo?name={{team.urlName}}&teamId={{team.teamId}}" target="_blank">
+														{{team.teamName}}
+													</a>
+												</td>
+												<td ng-repeat="stat in team.stats" ng-class="getStatsTitleClass(stat.mobile)">
+													{{stat.value}}
+												</td>
+
+												<!-- <td ng-repeat="stat in team.stats" ng-class="getStatsTitleClass(stat.mobile)" ng-if="stat.code !='J' && $first">
+													test
+												</td>
+												<td ng-else ng-repeat="stat in team.stats" ng-class="getStatsTitleClass(stat.mobile)">
+													{{stat.value}}
+												</td> -->
+
+											</tr>
+									</tbody>
+							</table>
+						</div>
+				</section>
+			</section>
+		</article>
+    </div>
+	<script src="libs/angular.min.js"></script>
+	<script src="libs/angular-route.min.js"></script>
+	<script src="libs/angular-resource.min.js"></script>
+	<script src="libs/angular-locale_es-ve.js"></script>
+	<script src="libs/angular-sanitize.js"></script>
+	<script src="libs/angular-animate.min.js"></script>
+	<script src="libs/jquery.min.js"></script>
+	<script src="libs_ui/jquery-ui.min.js"></script>
+	<script src="libs/lightslider.min.js"></script>
+
+	<script src="properties/baseballProperties.js"></script>
+	<script src="properties/teamProperties.js"></script>
+	<script src="libs/baseball-utility.js"></script>
+
+	<script src="js/positionApp.js"></script>
+	<script src="js/controller/positionController.js"></script>
+
+	<script src="js/services/positionServices.js"></script>
+
+</body>
+</html>

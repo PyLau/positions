@@ -1,0 +1,1212 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,700,500,300|Roboto+Condensed|Roboto+Mono|Roboto+Slab);
+/*
+	-------------------------------------------------------------
+	Mixin para definir los estilos de las tabs.
+	-------------------------------------------------------------
+	$bgTabs: Define el color de fondo de los tabs.
+	$bgTabsNormal: Define el color de fondo de los tabs.
+	$bgTabsHover: Define el color del Background de los tabs.
+	$bgTabsActive: Define el color del background del tab activo.
+	
+	$colorText: Define el color de texto de los tabs.
+	$colorTextHover: Define el color del texto al hacer hover.
+	$colorTextActive: Define el color del texto del tab activo.
+	--------------------------------------------------------------
+ */
+/*
+	---------------------------------------------------------------------------
+	Mixin para definir los estilos de las tablas.
+	---------------------------------------------------------------------------
+	$bgTable: Define el color del background de la tabla.
+	$colorTextTable: Define el color del texto de la tabla.
+	$bgThead: Define el color del background de el cabecero(thead) de la tabla.
+	$colorTextThead: Define el color del texto del cabecero(thead) de la tabla.
+	$bgHoverRow: Define el color del background de las filas al hacer hover
+	$colorLineSpace: Define el color de la linea de separacion de las filas.
+	$lineThickness: Define el grosor de la linea de ´separacion de las filas.
+	----------------------------------------------------------------------------
+ */
+/*
+	---------------------------------------------------------------------------
+	Mixin para manejar los sprite para cada projecto
+	---------------------------------------------------------------------------
+ */
+/*
+	---------------------------------------------------------------------------
+	Mixin estilos lightslider
+	---------------------------------------------------------------------------
+ */
+.visible-small,
+.visible-medium,
+.visible-tablet,
+.visible-big {
+  display: none !important;
+}
+
+@media (max-width: 767px) {
+  .hidden-small {
+    display: none !important;
+  }
+
+  .visible-small {
+    display: block !important;
+  }
+
+  th.visible-small,
+  td.visible-small {
+    display: table-cell !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-medium {
+    display: none !important;
+  }
+
+  .visible-medium {
+    display: block !important;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .hidden-tablet {
+    display: none !important;
+  }
+
+  .visible-tablet {
+    display: block !important;
+  }
+}
+@media (min-width: 1200px) {
+  .hidden-big {
+    display: none !important;
+  }
+
+  .visible-big {
+    display: block !important;
+  }
+}
+.show {
+  display: inline;
+  opacity: 1;
+}
+
+.hidden {
+  display: none !important;
+  opacity: 0;
+}
+
+.hide {
+  display: none;
+}
+.hide.show {
+  display: block;
+}
+
+.spin img {
+  width: 21px;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+html,
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.one > .positions > header > .icon-plus {
+  display: block;
+}
+
+.one .positions header .icon-plus {
+  display: block;
+  background-color: #555555;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  float: right;
+  width: 26px;
+  height: 26px;
+  margin: 1.4% 2%;
+}
+.one .positions header .icon-plus i {
+  font-size: 18px;
+  color: whitesmoke;
+  padding: 5px 0 0 6px;
+  cursor: pointer;
+}
+.one .positions .tabs ul li .round-desktop {
+  display: none;
+}
+.one .positions .tabs ul li .round-mobile {
+  display: block;
+}
+.one .positions .widget-positions table thead tr th {
+  padding: 1px 7.5px;
+}
+.one .positions .mobile-positions {
+  display: block;
+}
+.one .positions .desktop-positions {
+  display: none;
+}
+
+.mobile-positions {
+  display: none;
+}
+
+.positions {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: Roboto, sans-serif;
+  background-color: #E2E2E2;
+}
+.positions:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+.positions *, .positions *:before, .positions *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.positions header {
+  overflow: hidden;
+  *zoom: 1;
+  background: #252525;
+}
+.positions header h1 {
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+  color: #fff;
+  font-weight: 500;
+  margin: 0px;
+  padding: 7px 10px;
+  float: left;
+  line-height: 21px;
+}
+.positions header .icon-plus {
+  display: block;
+  background-color: #555555;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  float: right;
+  width: 26px;
+  height: 26px;
+  margin: 1.4% 2%;
+}
+.positions header .icon-plus i {
+  font-size: 23px;
+  color: whitesmoke;
+  padding: 0 0 0 6px;
+  cursor: pointer;
+  font-style: normal;
+}
+.positions header .icon-plus a {
+  text-decoration: none;
+}
+.positions .tabs ul {
+  background: #e2e2e2;
+}
+.positions .tabs ul li {
+  background: #e2e2e2;
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.positions .tabs ul li:first-child {
+  padding-left: 0;
+}
+.positions .tabs ul li:last-child {
+  padding-right: 0;
+}
+.positions .tabs ul li.last {
+  padding-right: 0;
+}
+.positions .tabs ul li a {
+  color: #666;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+}
+.positions .tabs ul li:hover {
+  background: #E53935;
+}
+.positions .tabs ul li:hover a {
+  color: #fff;
+}
+.positions .tabs ul li.active {
+  background: #E53935;
+}
+.positions .tabs ul li.active a {
+  color: #fff;
+  font-weight: bold;
+}
+.positions .tabs .tabs {
+  background: #e2e2e2;
+}
+.positions .tabs .tabs ul {
+  background: #B7B7B7;
+}
+.positions .tabs .tabs ul li {
+  background: #B7B7B7;
+}
+.positions .tabs .tabs ul li a {
+  color: #000000;
+}
+.positions .tabs .tabs ul li.ui-tabs-active {
+  background-color: #666;
+  color: #fff;
+}
+.positions .tabs .tabs ul li:hover {
+  background-color: #666;
+}
+.positions .tabs .tabs ul li:hover a {
+  color: #fff;
+}
+.positions .tabs ul {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+}
+.positions .tabs ul li {
+  margin-right: 1px;
+  font-family: Roboto, sans-serif;
+  font-size: 13px;
+  line-height: 10px;
+  text-transform: uppercase;
+}
+.positions .tabs ul li li:hover a {
+  font-weight: bold;
+}
+.positions .tabs ul li a {
+  outline: none;
+  display: block;
+  padding: 10px;
+  font-weight: 400;
+}
+.positions .tabs ul li .round-mobile {
+  display: none;
+}
+.positions .tabs ul li .round-desktop {
+  display: block;
+}
+.positions .tabs ul li.ui-tabs-active {
+  background-color: #E53935;
+}
+.positions .tabs ul li.ui-tabs-active a {
+  color: #fff;
+  font-weight: bold;
+}
+.positions .tabs .ui-tabs-hide {
+  display: none;
+}
+.positions .tabs-2 ul {
+  background: #e2e2e2;
+}
+.positions .tabs-2 ul li {
+  background: #e2e2e2;
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.positions .tabs-2 ul li:first-child {
+  padding-left: 0;
+}
+.positions .tabs-2 ul li:last-child {
+  padding-right: 0;
+}
+.positions .tabs-2 ul li.last {
+  padding-right: 0;
+}
+.positions .tabs-2 ul li a {
+  color: #666;
+  text-decoration: none;
+  font-family: Roboto, sans-serif;
+}
+.positions .tabs-2 ul li:hover {
+  background: #E53935;
+}
+.positions .tabs-2 ul li:hover a {
+  color: #fff;
+}
+.positions .tabs-2 ul li.active {
+  background: #E53935;
+}
+.positions .tabs-2 ul li.active a {
+  color: #fff;
+  font-weight: bold;
+}
+.positions span {
+  overflow: hidden;
+  *zoom: 1;
+  color: #fff;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: bold;
+  margin: 12px;
+  padding: 0;
+  text-transform: uppercase;
+}
+.positions .widget-positions table {
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0;
+  color: #000;
+}
+.positions .widget-positions table thead {
+  font-size: 12px;
+  background-color: #d7d7d7;
+}
+.positions .widget-positions table thead tr th {
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
+  cursor: default;
+}
+.positions .widget-positions table thead tr th:first-child {
+  text-align: left;
+  padding-left: 10px;
+}
+.positions .widget-positions table tbody tr td {
+  font-size: 11px;
+  line-height: 18px;
+  text-align: center;
+}
+.positions .widget-positions table tbody tr td .icon {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  float: left;
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-color: #D7D7D7;
+  padding: 2px;
+  margin: 5px 5px;
+}
+.positions .widget-positions table tbody tr td .icon i {
+  display: block;
+  width: 24px;
+  height: 24px;
+}
+.positions .widget-positions table tbody tr td a {
+  text-decoration: none;
+  color: #333;
+}
+.positions .widget-positions table tbody tr td a:hover {
+  color: #fff;
+}
+.positions .widget-positions table tbody tr td:first-child {
+  text-align: left;
+  line-height: 35px;
+}
+.positions .widget-positions table tbody tr td.pts {
+  background-color: #666;
+  color: #fff;
+  font-weight: bold;
+}
+.positions .widget-positions table tbody tr.odd {
+  background: #EBEBEB;
+}
+.positions .widget-positions table tbody tr.even {
+  background: #E1E1E1;
+}
+.positions .widget-positions table tbody tr:hover {
+  background: #E53935;
+  color: #fff;
+  cursor: default;
+}
+.positions .widget-positions table tbody tr:hover .pts {
+  background: #E53935;
+  cursor: default;
+}
+.positions .widget-positions table tbody tr:hover a {
+  color: #fff;
+}
+.positions .widget-positions table tbody tr.cruces {
+  cursor: default;
+}
+.positions .widget-positions table tbody tr.cruces td {
+  padding: 5px 0 5px 10px;
+  border-left: 15px solid #E53935;
+  background: #000000;
+  color: #FFFFFF;
+  line-height: 1;
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.positions .widget-positions table tbody tr.title-serie {
+  text-align: left;
+  font-weight: bold;
+  color: #fff;
+  cursor: default;
+  font-size: 12px;
+  line-height: 30px;
+  background-color: #444;
+}
+.positions .widget-positions table tbody tr.title-serie th {
+  padding-left: 10px;
+}
+.positions .widget-positions table tbody tr.title-serie:hover {
+  background-color: #444;
+}
+
+@media (max-width: 767px) {
+  .positions .mobile-positions {
+    display: block;
+    table-layout: fixed;
+  }
+  .positions .mobile-positions thead tr {
+    width: 100%;
+  }
+  .positions .mobile-positions thead tr th {
+    width: 100%;
+  }
+  .positions .mobile-positions tbody tr {
+    width: 100%;
+  }
+  .positions .mobile-positions tbody tr td {
+    width: 100%;
+  }
+  .positions .tabs ul li .round-desktop {
+    display: none;
+  }
+  .positions .tabs ul li .round-mobile {
+    display: block;
+  }
+
+  .desktop-positions {
+    display: none;
+  }
+}
+.mlb-ARI-18, .mlb-ARI-24, .mlb-ARI-32, .mlb-ARI-62, .mlb-ARI-72, .mlb-ATL-18, .mlb-ATL-24, .mlb-ATL-32, .mlb-ATL-62, .mlb-ATL-72, .mlb-BAL-18, .mlb-BAL-24, .mlb-BAL-32, .mlb-BAL-62, .mlb-BAL-72, .mlb-BOS-18, .mlb-BOS-24, .mlb-BOS-32, .mlb-BOS-62, .mlb-BOS-72, .mlb-CHC-18, .mlb-CHC-24, .mlb-CHC-32, .mlb-CHC-62, .mlb-CHC-72, .mlb-CIN-18, .mlb-CIN-24, .mlb-CIN-32, .mlb-CIN-62, .mlb-CIN-72, .mlb-CLE-18, .mlb-CLE-24, .mlb-CLE-32, .mlb-CLE-62, .mlb-CLE-72, .mlb-COL-18, .mlb-COL-24, .mlb-COL-32, .mlb-COL-62, .mlb-COL-72, .mlb-CWS-18, .mlb-CWS-24, .mlb-CWS-32, .mlb-CWS-62, .mlb-CWS-72, .mlb-DET-18, .mlb-DET-24, .mlb-DET-32, .mlb-DET-62, .mlb-DET-72, .mlb-HOU-18, .mlb-HOU-24, .mlb-HOU-32, .mlb-HOU-62, .mlb-HOU-72, .mlb-KC-18, .mlb-KC-24, .mlb-KC-32, .mlb-KC-62, .mlb-KC-72, .mlb-LAA-18, .mlb-LAA-24, .mlb-LAA-32, .mlb-LAA-62, .mlb-LAA-72, .mlb-LAD-18, .mlb-LAD-24, .mlb-LAD-32, .mlb-LAD-62, .mlb-LAD-72, .mlb-MIA-18, .mlb-MIA-24, .mlb-MIA-32, .mlb-MIA-62, .mlb-MIA-72, .mlb-MIL-18, .mlb-MIL-24, .mlb-MIL-32, .mlb-MIL-62, .mlb-MIL-72, .mlb-MIN-18, .mlb-MIN-24, .mlb-MIN-32, .mlb-MIN-62, .mlb-MIN-72, .mlb-NYM-18, .mlb-NYM-24, .mlb-NYM-32, .mlb-NYM-62, .mlb-NYM-72, .mlb-NYY-18, .mlb-NYY-24, .mlb-NYY-32, .mlb-NYY-62, .mlb-NYY-72, .mlb-OAK-18, .mlb-OAK-24, .mlb-OAK-32, .mlb-OAK-62, .mlb-OAK-72, .mlb-PHI-18, .mlb-PHI-24, .mlb-PHI-32, .mlb-PHI-62, .mlb-PHI-72, .mlb-PIT-18, .mlb-PIT-24, .mlb-PIT-32, .mlb-PIT-62, .mlb-PIT-72, .mlb-SD-18, .mlb-SD-24, .mlb-SD-32, .mlb-SD-62, .mlb-SD-72, .mlb-SEA-18, .mlb-SEA-24, .mlb-SEA-32, .mlb-SEA-62, .mlb-SEA-72, .mlb-SF-18, .mlb-SF-24, .mlb-SF-32, .mlb-SF-62, .mlb-SF-72, .mlb-STL-18, .mlb-STL-24, .mlb-STL-32, .mlb-STL-62, .mlb-STL-72, .mlb-TB-18, .mlb-TB-24, .mlb-TB-32, .mlb-TB-62, .mlb-TB-72, .mlb-TEX-18, .mlb-TEX-24, .mlb-TEX-32, .mlb-TEX-62, .mlb-TEX-72, .mlb-TOR-18, .mlb-TOR-24, .mlb-TOR-32, .mlb-TOR-62, .mlb-TOR-72, .mlb-WSH-18, .mlb-WSH-24, .mlb-WSH-32, .mlb-WSH-62, .mlb-WSH-72, .mlb-sprite {
+  background-image: url("../../images/mlb-s756856795f.png");
+  background-repeat: no-repeat;
+}
+
+.mlb-ARI-18 {
+  background-position: -48px -366px;
+}
+
+.mlb-ARI-24 {
+  background-position: -48px -150px;
+}
+
+.mlb-ARI-32 {
+  background-position: -32px -742px;
+}
+
+.mlb-ARI-62 {
+  background-position: 0 -1118px;
+}
+
+.mlb-ARI-72 {
+  background-position: 0 -4602px;
+}
+
+.mlb-ATL-18 {
+  background-position: -18px 0;
+}
+
+.mlb-ATL-24 {
+  background-position: -48px -222px;
+}
+
+.mlb-ATL-32 {
+  background-position: 0 -550px;
+}
+
+.mlb-ATL-62 {
+  background-position: 0 -1242px;
+}
+
+.mlb-ATL-72 {
+  background-position: 0 -4314px;
+}
+
+.mlb-BAL-18 {
+  background-position: -18px -54px;
+}
+
+.mlb-BAL-24 {
+  background-position: 0 -318px;
+}
+
+.mlb-BAL-32 {
+  background-position: 0 -838px;
+}
+
+.mlb-BAL-62 {
+  background-position: 0 -1490px;
+}
+
+.mlb-BAL-72 {
+  background-position: 0 -4170px;
+}
+
+.mlb-BOS-18 {
+  background-position: -54px -36px;
+}
+
+.mlb-BOS-24 {
+  background-position: 0 -342px;
+}
+
+.mlb-BOS-32 {
+  background-position: -32px -390px;
+}
+
+.mlb-BOS-62 {
+  background-position: 0 -1738px;
+}
+
+.mlb-BOS-72 {
+  background-position: 0 -3882px;
+}
+
+.mlb-CHC-18 {
+  background-position: 0 -72px;
+}
+
+.mlb-CHC-24 {
+  background-position: -48px -246px;
+}
+
+.mlb-CHC-32 {
+  background-position: -32px -582px;
+}
+
+.mlb-CHC-62 {
+  background-position: 0 -1800px;
+}
+
+.mlb-CHC-72 {
+  background-position: 0 -3594px;
+}
+
+.mlb-CIN-18 {
+  background-position: -24px -126px;
+}
+
+.mlb-CIN-24 {
+  background-position: -24px -198px;
+}
+
+.mlb-CIN-32 {
+  background-position: -32px -710px;
+}
+
+.mlb-CIN-62 {
+  background-position: 0 -2048px;
+}
+
+.mlb-CIN-72 {
+  background-position: 0 -3450px;
+}
+
+.mlb-CLE-18 {
+  background-position: -18px -108px;
+}
+
+.mlb-CLE-24 {
+  background-position: 0 -150px;
+}
+
+.mlb-CLE-32 {
+  background-position: 0 -806px;
+}
+
+.mlb-CLE-62 {
+  background-position: 0 -2234px;
+}
+
+.mlb-CLE-72 {
+  background-position: 0 -3162px;
+}
+
+.mlb-COL-18 {
+  background-position: 0 -108px;
+}
+
+.mlb-COL-24 {
+  background-position: -48px -174px;
+}
+
+.mlb-COL-32 {
+  background-position: -32px -678px;
+}
+
+.mlb-COL-62 {
+  background-position: 0 -2358px;
+}
+
+.mlb-COL-72 {
+  background-position: 0 -2874px;
+}
+
+.mlb-CWS-18 {
+  background-position: -54px -90px;
+}
+
+.mlb-CWS-24 {
+  background-position: -24px -222px;
+}
+
+.mlb-CWS-32 {
+  background-position: 0 -614px;
+}
+
+.mlb-CWS-62 {
+  background-position: 0 -2668px;
+}
+
+.mlb-CWS-72 {
+  background-position: 0 -3810px;
+}
+
+.mlb-DET-18 {
+  background-position: -18px -72px;
+}
+
+.mlb-DET-24 {
+  background-position: 0 -270px;
+}
+
+.mlb-DET-32 {
+  background-position: -32px -550px;
+}
+
+.mlb-DET-62 {
+  background-position: 0 -2544px;
+}
+
+.mlb-DET-72 {
+  background-position: 0 -2946px;
+}
+
+.mlb-HOU-18 {
+  background-position: -36px -90px;
+}
+
+.mlb-HOU-24 {
+  background-position: -48px -294px;
+}
+
+.mlb-HOU-32 {
+  background-position: -32px -454px;
+}
+
+.mlb-HOU-62 {
+  background-position: 0 -2420px;
+}
+
+.mlb-HOU-72 {
+  background-position: 0 -3234px;
+}
+
+.mlb-KC-18 {
+  background-position: -54px -54px;
+}
+
+.mlb-KC-24 {
+  background-position: -24px -342px;
+}
+
+.mlb-KC-32 {
+  background-position: 0 -390px;
+}
+
+.mlb-KC-62 {
+  background-position: 0 -2172px;
+}
+
+.mlb-KC-72 {
+  background-position: 0 -3306px;
+}
+
+.mlb-LAA-18 {
+  background-position: 0 -36px;
+}
+
+.mlb-LAA-24 {
+  background-position: -48px -318px;
+}
+
+.mlb-LAA-32 {
+  background-position: 0 -422px;
+}
+
+.mlb-LAA-62 {
+  background-position: 0 -1924px;
+}
+
+.mlb-LAA-72 {
+  background-position: 0 -3666px;
+}
+
+.mlb-LAD-18 {
+  background-position: -36px -54px;
+}
+
+.mlb-LAD-24 {
+  background-position: 0 -126px;
+}
+
+.mlb-LAD-32 {
+  background-position: -32px -486px;
+}
+
+.mlb-LAD-62 {
+  background-position: 0 -870px;
+}
+
+.mlb-LAD-72 {
+  background-position: 0 -4026px;
+}
+
+.mlb-MIA-18 {
+  background-position: -54px 0;
+}
+
+.mlb-MIA-24 {
+  background-position: -24px -270px;
+}
+
+.mlb-MIA-32 {
+  background-position: 0 -582px;
+}
+
+.mlb-MIA-62 {
+  background-position: 0 -1552px;
+}
+
+.mlb-MIA-72 {
+  background-position: 0 -4242px;
+}
+
+.mlb-MIL-18 {
+  background-position: 0 0;
+}
+
+.mlb-MIL-24 {
+  background-position: -48px -198px;
+}
+
+.mlb-MIL-32 {
+  background-position: -32px -646px;
+}
+
+.mlb-MIL-62 {
+  background-position: 0 -1304px;
+}
+
+.mlb-MIL-72 {
+  background-position: 0 -4530px;
+}
+
+.mlb-MIN-18 {
+  background-position: -36px -18px;
+}
+
+.mlb-MIN-24 {
+  background-position: -24px -174px;
+}
+
+.mlb-MIN-32 {
+  background-position: 0 -742px;
+}
+
+.mlb-MIN-62 {
+  background-position: 0 -1180px;
+}
+
+.mlb-MIN-72 {
+  background-position: 0 -4746px;
+}
+
+.mlb-NYM-18 {
+  background-position: 0 -18px;
+}
+
+.mlb-NYM-24 {
+  background-position: -24px -150px;
+}
+
+.mlb-NYM-32 {
+  background-position: -32px -806px;
+}
+
+.mlb-NYM-62 {
+  background-position: 0 -932px;
+}
+
+.mlb-NYM-72 {
+  background-position: 0 -2730px;
+}
+
+.mlb-NYY-18 {
+  background-position: 0 -90px;
+}
+
+.mlb-NYY-24 {
+  background-position: -24px -366px;
+}
+
+.mlb-NYY-32 {
+  background-position: 0 -774px;
+}
+
+.mlb-NYY-62 {
+  background-position: 0 -1056px;
+}
+
+.mlb-NYY-72 {
+  background-position: 0 -4674px;
+}
+
+.mlb-OAK-18 {
+  background-position: -18px -18px;
+}
+
+.mlb-OAK-24 {
+  background-position: 0 -198px;
+}
+
+.mlb-OAK-32 {
+  background-position: 0 -678px;
+}
+
+.mlb-OAK-62 {
+  background-position: 0 -1366px;
+}
+
+.mlb-OAK-72 {
+  background-position: 0 -4386px;
+}
+
+.mlb-PHI-18 {
+  background-position: -36px 0;
+}
+
+.mlb-PHI-24 {
+  background-position: -24px -246px;
+}
+
+.mlb-PHI-32 {
+  background-position: -32px -518px;
+}
+
+.mlb-PHI-62 {
+  background-position: 0 -1676px;
+}
+
+.mlb-PHI-72 {
+  background-position: 0 -3954px;
+}
+
+.mlb-PIT-18 {
+  background-position: 0 -54px;
+}
+
+.mlb-PIT-24 {
+  background-position: -24px -318px;
+}
+
+.mlb-PIT-32 {
+  background-position: -32px -422px;
+}
+
+.mlb-PIT-62 {
+  background-position: 0 -1986px;
+}
+
+.mlb-PIT-72 {
+  background-position: 0 -3522px;
+}
+
+.mlb-SD-18 {
+  background-position: -18px -36px;
+}
+
+.mlb-SD-24 {
+  background-position: 0 -366px;
+}
+
+.mlb-SD-32 {
+  background-position: -32px -838px;
+}
+
+.mlb-SD-62 {
+  background-position: 0 -2296px;
+}
+
+.mlb-SD-72 {
+  background-position: 0 -3090px;
+}
+
+.mlb-SEA-18 {
+  background-position: -18px -90px;
+}
+
+.mlb-SEA-24 {
+  background-position: 0 -294px;
+}
+
+.mlb-SEA-32 {
+  background-position: 0 -486px;
+}
+
+.mlb-SEA-62 {
+  background-position: 0 -2606px;
+}
+
+.mlb-SEA-72 {
+  background-position: 0 -2802px;
+}
+
+.mlb-SF-18 {
+  background-position: -36px -72px;
+}
+
+.mlb-SF-24 {
+  background-position: 0 -246px;
+}
+
+.mlb-SF-32 {
+  background-position: 0 -646px;
+}
+
+.mlb-SF-62 {
+  background-position: 0 -2482px;
+}
+
+.mlb-SF-72 {
+  background-position: 0 -3018px;
+}
+
+.mlb-STL-18 {
+  background-position: -42px -126px;
+}
+
+.mlb-STL-24 {
+  background-position: 0 -174px;
+}
+
+.mlb-STL-32 {
+  background-position: -32px -774px;
+}
+
+.mlb-STL-62 {
+  background-position: 0 -2110px;
+}
+
+.mlb-STL-72 {
+  background-position: 0 -3378px;
+}
+
+.mlb-TB-18 {
+  background-position: -36px -108px;
+}
+
+.mlb-TB-24 {
+  background-position: -48px -270px;
+}
+
+.mlb-TB-32 {
+  background-position: -32px -614px;
+}
+
+.mlb-TB-62 {
+  background-position: 0 -1862px;
+}
+
+.mlb-TB-72 {
+  background-position: 0 -3738px;
+}
+
+.mlb-TEX-18 {
+  background-position: -54px -72px;
+}
+
+.mlb-TEX-24 {
+  background-position: -24px -294px;
+}
+
+.mlb-TEX-32 {
+  background-position: 0 -454px;
+}
+
+.mlb-TEX-62 {
+  background-position: 0 -1614px;
+}
+
+.mlb-TEX-72 {
+  background-position: 0 -4098px;
+}
+
+.mlb-TOR-18 {
+  background-position: -36px -36px;
+}
+
+.mlb-TOR-24 {
+  background-position: -48px -342px;
+}
+
+.mlb-TOR-32 {
+  background-position: 0 -518px;
+}
+
+.mlb-TOR-62 {
+  background-position: 0 -1428px;
+}
+
+.mlb-TOR-72 {
+  background-position: 0 -4458px;
+}
+
+.mlb-WSH-18 {
+  background-position: -54px -18px;
+}
+
+.mlb-WSH-24 {
+  background-position: 0 -222px;
+}
+
+.mlb-WSH-32 {
+  background-position: 0 -710px;
+}
+
+.mlb-WSH-62 {
+  background-position: 0 -994px;
+}
+
+.mlb-WSH-72 {
+  background-position: 0 -4818px;
+}
+
+.icons-sprite, .icons-caret-left, .icons-caret-right, .icons-chevron-down, .icons-chevron-left, .icons-chevron-right, .icons-chevron-up, .icons-clock-24, .icons-family-24, .icons-flag-24, .icons-nopic-141, .icons-nopic-18, .icons-nopic-24, .icons-nopic-30, .icons-nopic-32, .icons-nopic-46, .icons-nopic-52, .icons-nopic-62, .icons-nopic-72, .icons-nopic-95, .icons-player-red, .icons-player-yellow, .icons-stadium-24, .icons-stadium, .icons-temperature-24, .icons-umbrella-24, .icons-user-24 {
+  background-image: url("../../images/icons-seafecc758c.png");
+  background-repeat: no-repeat;
+}
+
+.icons-caret-left {
+  background-position: -24px -31px;
+}
+
+.icons-caret-right {
+  background-position: -8px -55px;
+}
+
+.icons-chevron-down {
+  background-position: 0 -31px;
+}
+
+.icons-chevron-left {
+  background-position: 0 -55px;
+}
+
+.icons-chevron-right {
+  background-position: -16px -31px;
+}
+
+.icons-chevron-up {
+  background-position: -8px -31px;
+}
+
+.icons-clock-24 {
+  background-position: -45px 0;
+}
+
+.icons-family-24 {
+  background-position: -53px -31px;
+}
+
+.icons-flag-24 {
+  background-position: -77px -31px;
+}
+
+.icons-nopic-141 {
+  background-position: 0 -368px;
+}
+
+.icons-nopic-18 {
+  background-position: -35px -31px;
+}
+
+.icons-nopic-24 {
+  background-position: -69px 0;
+}
+
+.icons-nopic-30 {
+  background-position: 0 -107px;
+}
+
+.icons-nopic-32 {
+  background-position: -51px -107px;
+}
+
+.icons-nopic-46 {
+  background-position: -19px -55px;
+}
+
+.icons-nopic-52 {
+  background-position: -65px -55px;
+}
+
+.icons-nopic-62 {
+  background-position: -59px -211px;
+}
+
+.icons-nopic-72 {
+  background-position: 0 -139px;
+}
+
+.icons-nopic-95 {
+  background-position: 0 -273px;
+}
+
+.icons-player-red {
+  background-position: -30px -107px;
+}
+
+.icons-player-yellow {
+  background-position: 0 0;
+}
+
+.icons-stadium-24 {
+  background-position: -117px 0;
+}
+
+.icons-stadium {
+  background-position: 0 -211px;
+}
+
+.icons-temperature-24 {
+  background-position: -93px 0;
+}
+
+.icons-umbrella-24 {
+  background-position: -21px 0;
+}
+
+.icons-user-24 {
+  background-position: -101px -31px;
+}
