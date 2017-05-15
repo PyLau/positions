@@ -11,7 +11,16 @@ positionApp.service('PositionUtility', function() {
         }
         return className;
     };
-
+        this.getTeamNameById = function(teamId) {
+            if(teamId!=null && teamId!=undefined) {
+                if(teamNamesById!=null && teamNamesById!=undefined) {
+                    if(teamNamesById.hasOwnProperty(teamId)) {
+                        return teamNamesById[teamId];
+                    }
+                }
+            }
+            return 'not-name-team';
+        };
     this.getRowClass = function(index) {
         var className = '';
         if(index != undefined) {
